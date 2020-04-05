@@ -170,12 +170,43 @@ void lock_pairs(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
+        // check if a cycle will exist of current pair is added
         if (cycle(pairs[i].winner, pairs[i].loser, i) == false)
         {
+            // current pair will not create a cycle
+            // lock current pair
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
     }
     return;
+}
+
+// check if a cycle will exist if I add the current pair
+// winner = node of current winner
+// loser =  node of current loser
+// p = position of current pair in pairs array
+bool cycle(int winner, int loser, int pair_position)
+{
+    // check that I am not connecting to same node (recursion stop condition)
+    if (winner == loser)
+    {
+        return true;
+    }
+    else
+    {
+        // loop through the checked pairs
+        for (int j = 0; j < pair_position; j++)
+        {
+            if (locked[loser][pairs[j].loser] == true)
+            {
+                if (cycle(winner, pairs[j].loser, pair_position))
+                {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
 }
 
 // Print the winner of the election
@@ -197,27 +228,4 @@ void print_winner(void)
             printf("%s\n", candidates[i]);
         }
     }
-}
-
-// funtion to check if a cycle exists
-bool cycle(int start, int end, int p)
-{
-    if (start == end)
-    {
-        return true;
-    }
-    else
-    {
-        for (int j = 0; j < p; j++)
-        {
-            if (locked[end][pairs[j].loser] == true)
-            {
-                if (cycle(start, pairs[j].loser, p))
-                {
-                    return true;
-                }
-            }
-        }
-    }
-    return false;
 }
