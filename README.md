@@ -1,6 +1,6 @@
 # CS50x - Introduction to Computer Science
 
-The repository contains the project and problem sets for Harvard's CS50x 2020 course.
+The repository contains the projects and problem sets for Harvard's CS50x 2020 course.
 
 ## Contents:
 
