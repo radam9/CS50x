@@ -44,8 +44,8 @@ The repository contains the projects and problem sets for Harvard's CS50x 2020 c
 
 8. **set 7**
 
-	- **``movies``**:
-	- **``houses``**:
+	- **``movies``**: Variety of database calls for sqlite.
+	- **``houses``**: Two part Python program. ``import.py`` imports csv content into sqlite database. ``roster.py`` using "argv" the program calls the sqlite database and prints the results.
 
 9. **Tracks**
 
