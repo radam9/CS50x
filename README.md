@@ -49,10 +49,10 @@ The repository contains the projects and problem sets for Harvard's CS50x 2020 c
 
 9. **Tracks**
 
-	- Android
-	- Games
-	- iOS
-	- Web
+	- [ ] Android
+	- [ ] Games
+	- [ ] iOS
+	- [x] Web
 		- **set 8**
 			- **``homepage``**: Simple webpage using HTML, CSS and JavaScript.
 			- **``finance``**: flask
