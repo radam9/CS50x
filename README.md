@@ -53,5 +53,8 @@ The repository contains the projects and problem sets for Harvard's CS50x 2020 c
 	- Games
 	- iOS
 	- Web
+		- **set 8**
+			- **``homepage``**: Simple webpage using HTML, CSS and JavaScript.
+			- **``finance``**: flask
 
 10. **Final Project**
