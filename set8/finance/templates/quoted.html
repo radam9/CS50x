@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    {% if result == None %}
+    <ul class="list-group">
+        <li class="list-group-item">No such stock.</li>
+    </ul>
+    {% else %}
+    <ul class="list-group">
+      <li class="list-group-item"><span>Stock Name: </span>{{ result.name }}</li>
+      <li class="list-group-item"><span>Stock Price: </span>{{ result.price }}</li>
+      <li class="list-group-item"><span>Stock Symbol: </span>{{ result.symbol }}</li>
+    </ul>
+    {% endif %}
+{% endblock %}

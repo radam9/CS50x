@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Inventory
+{% endblock %}
+
+{% block main %}
+        <table class="table table-striped table-hover table-light">
+            <thead>
+                <tr>
+                    <th scope="col">Stock Name</th>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Current Price</th>
+                    <th scope="col">Total Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for inv in context.inventory %}
+                <tr>
+                    <td>{{ inv.name }}</td>
+                    <td>{{ inv.symbol }}</td>
+                    <td>{{ inv.quantity }}</td>
+                    <td>${{ inv.price }}</td>
+                    <td>{{ inv.total }}</td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td colspan="4">CASH</td>
+                    <td>{{ context.cash }}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr style="font-weight: 700;">
+                    <td colspan="4">TOTAL</td>
+                    <td>{{ context.total }}</td>
+                </tr>
+            </tfoot>
+        </table>
+{% endblock %}

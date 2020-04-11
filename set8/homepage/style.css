@@ -1,0 +1,55 @@
+/* Navigation bar styling for all html pages */
+.navbar-nav {
+    padding-left: 30px;
+}
+
+.nav-item {
+    padding-right: 20px;
+}
+
+.nav-link {
+    font-size: 1.1em;
+}
+
+/* Styling common to all 4 html pages */
+@media print {
+    .main-p {
+        display: none;
+    }
+}
+
+/* Styling for movies.html */
+.Container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.Container p {
+    font-family: Sans-serif;
+    font-weight: bold;
+    font-size: 1.25em;
+    width: 160px;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.a {
+    background-color: Teal;
+    margin: 10px;
+    width: 160px;
+    height: 210px;
+    position: relative;
+}
+a {
+    color: white;
+}
+
+/* Styling for books.html */
+#music-list ol {
+    font-weight: bold;
+}

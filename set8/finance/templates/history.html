@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+        <table class="table table-striped table-hover table-light">
+            <thead>
+                <tr>
+                    <th scope="col">Type</th>
+                    <th scope="col">Stock Name</th>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Total Value</th>
+                    <th scope="col">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for inv in context %}
+                <tr>
+                    {% if inv.cost > 0 %}
+                    <td>Sold</td>
+                    {% else %}
+                    <td>Bought</td>
+                    {% endif %}
+                    <td>{{ inv.stock }}</td>
+                    <td>{{ inv.symbol }}</td>
+                    <td>{{ inv.quantity }}</td>
+                    <td>${{ inv.value }}</td>
+                    <td>${{ inv.total }}</td>
+                    <td>{{ inv.date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}
