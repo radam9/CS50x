@@ -58,3 +58,5 @@ The repository contains the projects and problem sets for Harvard's CS50x 2020 c
 			- **``finance``**: flask
 
 10. **Final Project**
+
+	- [x] Bookmarkie: Bookmarks manager webapp using Flask
